@@ -11,8 +11,8 @@ I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-ben
 
 # Installation for ESP32
 ```
-git clone https://github.com/nopnop2002/esp-idf-dhrystone
-cd esp-idf-dhrystone/
+git clone https://github.com/nopnop2002/esp-idf-benchmark
+cd esp-idf-benchmark/
 idf.py set-target esp32
 idf.py menuconfig
 idf.py flash
@@ -20,8 +20,8 @@ idf.py flash
 
 # Installation for ESP32-S2
 ```
-git clone https://github.com/nopnop2002/esp-idf-dhrystone
-cd esp-idf-dhrystone/
+git clone https://github.com/nopnop2002/esp-idf-benchmark
+cd esp-idf-benchmark/
 idf.py set-target esp32s2
 idf.py menuconfig
 idf.py flash
@@ -30,8 +30,8 @@ idf.py flash
 
 # Installation for ESP32-C3
 ```
-git clone https://github.com/nopnop2002/esp-idf-dhrystone
-cd esp-idf-dhrystone/
+git clone https://github.com/nopnop2002/esp-idf-benchmark
+cd esp-idf-benchmark/
 idf.py set-target esp32c3
 idf.py menuconfig
 idf.py flash
