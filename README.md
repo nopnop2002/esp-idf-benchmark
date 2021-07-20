@@ -1,5 +1,5 @@
 # esp-idf-benchmark
-Dhrystone/Whetstone benchmark for esp-idf.
+Dhrystone/Whetstone benchmark for esp-idf.   
 I wanted to know the computing power of the ESP32-C3.   
 
 # Dhrystone Benchmark
