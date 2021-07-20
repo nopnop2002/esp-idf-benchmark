@@ -1,0 +1,54 @@
+# ESP32@240Mhz
+Target is ESP32@240Mhz
+Dhrystone Benchmark, Version C, Version 2.2
+Program compiled without 'register' attribute
+Using time(), HZ=1
+Trying 5000000 runs through Dhrystone:
+Microseconds for one run through Dhrystone:        4.0
+Dhrystones per Second:                          250000
+DMIPS:                                             142
+
+Loops: 1000, Iterations: 1, Duration: 6 sec.
+C Converted Double Precision Whetstones: 16.7 MIPS
+
+
+# ESP32@160Mhz
+Target is ESP32@160Mhz
+Dhrystone Benchmark, Version C, Version 2.2
+Program compiled without 'register' attribute
+Using time(), HZ=1
+Trying 5000000 runs through Dhrystone:
+Microseconds for one run through Dhrystone:        6.0
+Dhrystones per Second:                          166667
+DMIPS:                                              95
+
+Loops: 1000, Iterations: 1, Duration: 10 sec.
+C Converted Double Precision Whetstones: 10.0 MIPS
+
+
+# ESP32-S2@160Mhz
+Target is ESP32S2@160Mhz
+Dhrystone Benchmark, Version C, Version 2.2
+Program compiled without 'register' attribute
+Using time(), HZ=1
+Trying 500000 runs through Dhrystone:
+Microseconds for one run through Dhrystone:        6.0
+Dhrystones per Second:                          166667
+DMIPS:                                              95
+
+Loops: 1000, Iterations: 1, Duration: 12 sec.
+C Converted Double Precision Whetstones: 8.3 MIPS
+
+
+# ESP32-C3@160Mhz
+Target is ESP32C3@160Mhz
+Dhrystone Benchmark, Version C, Version 2.2
+Program compiled without 'register' attribute
+Using time(), HZ=1
+Trying 5000000 runs through Dhrystone:
+Microseconds for one run through Dhrystone:        3.4
+Dhrystones per Second:                          294118
+DMIPS:                                             167
+
+Loops: 1000, Iterations: 1, Duration: 12 sec.
+C Converted Double Precision Whetstones: 8.3 MIPS

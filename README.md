@@ -1,7 +1,6 @@
 # esp-idf-benchmark
 Dhrystone/Whetstone benchmark for esp-idf.
 
-Benchmark with O2 compile option enabled.   
 
 # Dhrystone Benchmark
 I ported from [here](https://github.com/Keith-S-Thompson/dhrystone/tree/master/v2.2).   
@@ -36,13 +35,23 @@ idf.py set-target esp32c3
 idf.py menuconfig
 idf.py flash
 ```
+
+# Benchmark with Os compile option(default).   
+
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
+|:-:|:-:|:-:|:-:|
+|ESP32|240|142|16.7|
+|ESP32|160|95|10.0|
+|ESP32S2|160|95|8.3|
+|ESP32C3|160|167|8.3|
+
 # How to set O2 compile option   
 The default compile option for esp-idf is Os.   
 Compile options can be changed in the CMakeLists.txt.   
 Changing the compile option to [O2] enables [zero-overhead loop].   
 zero-overhead loop can execute a loop with a predetermined number of executions without branching overhead.   
 
-# Result   
+# Benchmark with O2 compile option enabled.   
 
 |SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
 |:-:|:-:|:-:|:-:|
