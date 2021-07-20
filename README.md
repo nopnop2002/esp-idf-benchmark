@@ -38,6 +38,7 @@ idf.py menuconfig
 idf.py flash
 ```
 
+__It is unknown at this time whether it has the zero-overhead loops function.__   
 
 
 # Benchmark with Os compile option(default).   
