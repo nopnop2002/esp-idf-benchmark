@@ -42,7 +42,6 @@ C Converted Double Precision Whetstones: 25.0 MIPS
 
 # ESP32-C3@160Mhz
 Target is ESP32C3@160Mhz
-
 Dhrystone Benchmark, Version C, Version 2.2
 Program compiled without 'register' attribute
 Using time(), HZ=1
