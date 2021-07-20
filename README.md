@@ -53,8 +53,8 @@ __It is unknown at this time whether it has the zero-overhead loops function.__
 # How to set O2 compile option   
 The default compile option for esp-idf is Os.   
 Compile options can be changed in the CMakeLists.txt.   
-On the ESP32, Changing the compile option to [O2] enables [zero-overhead loop].   
-zero-overhead loop can execute a loop with a predetermined number of executions without branching overhead.   
+On the ESP32, Changing the compile option to [O2] enables [zero-overhead loops].   
+zero-overhead loops can execute a loop with a predetermined number of executions without branching overhead.   
 
 
 # Benchmark with O2 compile option enabled.   
