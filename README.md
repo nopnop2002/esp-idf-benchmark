@@ -38,7 +38,7 @@ idf.py flash
 ```
 # How to set O2 compile option   
 The default compile option for esp-idf is Os.   
-Compile options can be changed in the Cmakefile.   
+Compile options can be changed in the CMakeLists.txt.   
 Changing the compile option to [O2] enables [zero-overhead loop].   
 zero-overhead loop can execute a loop with a predetermined number of executions without branching overhead.   
 
