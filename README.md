@@ -40,6 +40,30 @@ idf.py flash
 
 __It is unknown at this time whether it has the zero-overhead loops function.__   
 
+# Compiler used   
+```
+$ cd .espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin
+$ ./xtensa-esp32-elf-cc --version
+xtensa-esp32-elf-cc (crosstool-NG esp-2020r3) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+
+$ cd .espressif/tools/xtensa-esp32s2-elf/esp-2020r3-8.4.0/xtensa-esp32s2-elf/bin
+$ ./xtensa-esp32s2-elf-cc --version
+xtensa-esp32s2-elf-cc (crosstool-NG esp-2020r3) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$ cd .espressif/tools/riscv32-esp-elf/1.24.0.123_64eb9ff-8.4.0/riscv32-esp-elf/bin
+$ ./riscv32-esp-elf-cc --version
+riscv32-esp-elf-cc (crosstool-NG 1.24.0.123_64eb9ff) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
 
 # Benchmark with Os compile option(default).   
 
