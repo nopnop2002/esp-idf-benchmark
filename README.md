@@ -9,7 +9,7 @@ I ported from [here](https://github.com/Keith-S-Thompson/dhrystone/tree/master/v
 I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-bench/src/whetstone).
 
 # Installation for ESP32
-```
+```Shell
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
 idf.py set-target esp32
@@ -18,7 +18,7 @@ idf.py flash
 ```
 
 # Installation for ESP32-S2
-```
+```Shell
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
 idf.py set-target esp32s2
@@ -30,7 +30,7 @@ __The following options do not exist in ESP32-S2: FPU, zero-overhead loops, MAC,
 
 
 # Installation for ESP32-C3
-```
+```Shell
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
 idf.py set-target esp32c3
@@ -41,7 +41,7 @@ idf.py flash
 __It is unknown at this time whether it has the zero-overhead loops function.__   
 
 # Compiler used   
-```
+```Shell
 $ cd .espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin
 $ ./xtensa-esp32-elf-cc --version
 xtensa-esp32-elf-cc (crosstool-NG esp-2020r3) 8.4.0
