@@ -41,7 +41,7 @@ idf.py flash
 __It is unknown at this time whether it has the zero-overhead loops function.__   
 
 # Compiler used   
-```Shell
+```
 $ cd .espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin
 $ ./xtensa-esp32-elf-cc --version
 xtensa-esp32-elf-cc (crosstool-NG esp-2020r3) 8.4.0
