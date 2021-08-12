@@ -21,9 +21,14 @@ I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-ben
 ```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
-make menuconfig
+make menuconfig(*1)
 make flash monitor
 ```
+
+__(*1)__   
+You have to change this config.   
+![ESP8266_RTOS_SDK ](https://user-images.githubusercontent.com/6020549/129280851-0a7e375d-ae32-40d6-b439-34c0ab54eb98.jpg)
+
 
 # Installation for ESP32
 ```
