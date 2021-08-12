@@ -12,7 +12,9 @@ void app_main()
 	UBaseType_t my_prio = uxTaskPriorityGet(NULL);
 	ESP_LOGD(my_name, "my_prio=%d", my_prio);
 
-#if CONFIG_IDF_TARGET_ESP32
+#if CONFIG_IDF_TARGET_ESP8266
+	printf("Target is ESP8266\n");
+#elif CONFIG_IDF_TARGET_ESP32
 	printf("Target is ESP32@%dMhz\n", ets_get_cpu_frequency());
 #elif CONFIG_IDF_TARGET_ESP32S2
 	printf("Target is ESP32S2@%dMhz\n", ets_get_cpu_frequency());

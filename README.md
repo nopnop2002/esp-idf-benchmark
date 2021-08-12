@@ -8,55 +8,86 @@ I ported from [here](https://github.com/Keith-S-Thompson/dhrystone/tree/master/v
 # Whetstone Benchmark 
 I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-bench/src/whetstone).
 
+# Supported versions of frameworks and devices
+
+|Chip|Framework|Versions|
+|:-:|:-:|:-:|
+|ESP8266|ESP8266 RTOS SDK|v3.x|
+|ESP32|ESP-IDF|v4.x|
+|ESP32-S2|ESP-IDF|v4.x|
+|ESP32-C3|ESP-IDF|v4.x|
+
+# Installation for ESP8266
+```
+git clone https://github.com/nopnop2002/esp-idf-benchmark
+cd esp-idf-benchmark/
+make menuconfig
+make flash monitor
+```
+
 # Installation for ESP32
-```Shell
+```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
 idf.py set-target esp32
 idf.py menuconfig
-idf.py flash
+idf.py flash monitor
 ```
 
 # Installation for ESP32-S2
-```Shell
+```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
 idf.py set-target esp32s2
 idf.py menuconfig
-idf.py flash
+idf.py flash monitor
 ```
 
 __The following options do not exist in ESP32-S2: FPU, zero-overhead loops, MAC, DFP accelerator.__   
 
 
 # Installation for ESP32-C3
-```Shell
+```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
 idf.py set-target esp32c3
 idf.py menuconfig
-idf.py flash
+idf.py flash monitor
 ```
 
 __It is unknown at this time whether it has the zero-overhead loops function.__   
 
 # Compiler used   
+
+## ESP8266
 ```
-$ cd .espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin
+$ xtensa-lx106-elf-gcc --version
+xtensa-lx106-elf-gcc (crosstool-NG esp-2020r3-49-gd5524c1) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+## ESP32
+```
 $ ./xtensa-esp32-elf-cc --version
 xtensa-esp32-elf-cc (crosstool-NG esp-2020r3) 8.4.0
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+```
 
-$ cd .espressif/tools/xtensa-esp32s2-elf/esp-2020r3-8.4.0/xtensa-esp32s2-elf/bin
+## ESP32-S2
+```
 $ ./xtensa-esp32s2-elf-cc --version
 xtensa-esp32s2-elf-cc (crosstool-NG esp-2020r3) 8.4.0
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
 
-$ cd .espressif/tools/riscv32-esp-elf/1.24.0.123_64eb9ff-8.4.0/riscv32-esp-elf/bin
+## ESP32-C3
+```
 $ ./riscv32-esp-elf-cc --version
 riscv32-esp-elf-cc (crosstool-NG 1.24.0.123_64eb9ff) 8.4.0
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -65,10 +96,11 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 
-# Benchmark with Os compile option(default).   
+# Benchmark with Og compile option(default).   
 
 |SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
 |:-:|:-:|:-:|:-:|
+|ESP8266|160|57|6.2|
 |ESP32|240|142|16.7|
 |ESP32|160|95|10.0|
 |ESP32S2|160|95|8.3|
