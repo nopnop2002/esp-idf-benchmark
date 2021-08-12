@@ -8,7 +8,7 @@ I ported from [here](https://github.com/Keith-S-Thompson/dhrystone/tree/master/v
 # Whetstone Benchmark 
 I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-bench/src/whetstone).
 
-# Supported versions of frameworks and devices
+# Supported versions of frameworks
 
 |Chip|Framework|Versions|
 |:-:|:-:|:-:|
