@@ -1,3 +1,16 @@
+# ESP8266@160Mhz
+Target is ESP8266
+Dhrystone Benchmark, Version C, Version 2.2
+Program compiled without 'register' attribute
+Using time(), HZ=1
+Trying 500000 runs through Dhrystone:
+Microseconds for one run through Dhrystone:       10.0
+Dhrystones per Second:                          100000
+DMIPS:                                              57
+
+Loops: 1000, Iterations: 1, Duration: 16 sec.
+C Converted Double Precision Whetstones: 6.2 MIPS
+
 # ESP32@240Mhz
 Target is ESP32@240Mhz
 Dhrystone Benchmark, Version C, Version 2.2
