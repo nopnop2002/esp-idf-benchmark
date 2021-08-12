@@ -112,7 +112,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32C3|160|167|8.3|
 
 # How to set O2 compile option   
-The default compile option for esp-idf is Os.   
+The default compile option for esp-idf is Og.   
 Compile options can be changed in the CMakeLists.txt.   
 On the ESP32, Changing the compile option to [O2] enables [zero-overhead loops].   
 zero-overhead loops can execute a loop with a predetermined number of executions without branching overhead.   
