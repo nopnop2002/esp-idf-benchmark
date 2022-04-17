@@ -74,7 +74,7 @@ idf.py flash monitor
 
 __It is unknown at this time whether it has the zero-overhead loops function.__   
 
-# Compiler used   
+# Compiler Version   
 
 ## ESP8266
 ```
