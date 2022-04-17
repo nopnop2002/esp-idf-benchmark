@@ -13,9 +13,10 @@ I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-ben
 |Chip|Framework|Versions|
 |:-:|:-:|:-:|
 |ESP8266|ESP8266 RTOS SDK|v3.x|
-|ESP32|ESP-IDF|v4.x|
-|ESP32-S2|ESP-IDF|v4.x|
-|ESP32-C3|ESP-IDF|v4.x|
+|ESP32|ESP-IDF|v5.0|
+|ESP32-S2|ESP-IDF|v5.0|
+|ESP32-S3|ESP-IDF|v5.0|
+|ESP32-C3|ESP-IDF|v5.0|
 
 # Installation for ESP8266
 ```
@@ -49,6 +50,17 @@ idf.py flash monitor
 ```
 
 __The following options do not exist in ESP32-S2: FPU, zero-overhead loops, MAC, DFP accelerator.__   
+
+
+# Installation for ESP32-S3
+```
+git clone https://github.com/nopnop2002/esp-idf-benchmark
+cd esp-idf-benchmark/
+idf.py set-target esp32s3
+idf.py menuconfig
+idf.py flash monitor
+```
+__It is unknown at this time whether it has the zero-overhead loops function.__   
 
 
 # Installation for ESP32-C3
@@ -91,6 +103,16 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
+## ESP32-S3
+```
+$ ./xtensa-esp32s3-elf-cc --version
+xtensa-esp32s3-elf-cc (crosstool-NG esp-2020r3) 8.4.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+
 ## ESP32-C3
 ```
 $ ./riscv32-esp-elf-cc --version
@@ -106,10 +128,13 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
 |:-:|:-:|:-:|:-:|
 |ESP8266|160|57|6.2|
-|ESP32|240|142|16.7|
 |ESP32|160|95|10.0|
+|ESP32|240|142|16.7|
 |ESP32S2|160|95|8.3|
-|ESP32C3|160|167|8.3|
+|ESP32S2|240|142|12.5|
+|ESP32S3|160|142|10.0|
+|ESP32S3|240|178|16.7|
+|ESP32C3|160|167|9.1|
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
@@ -122,7 +147,10 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 
 |SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
 |:-:|:-:|:-:|:-:|
-|ESP32|240|259|50.0|
 |ESP32|160|167|33.3|
-|ESP32S2|160|142|25.0|
-|ESP32C3|160|356|20.0|
+|ESP32|240|259|50.0|
+|ESP32S2|160|142|33.3|
+|ESP32S2|240|237|33.3|
+|ESP32S3|160|190|33.3|
+|ESP32S3|240|316|50.0|
+|ESP32C3|160|356|25.0|
