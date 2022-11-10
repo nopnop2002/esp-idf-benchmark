@@ -113,7 +113,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32C3|160|167|8.3||
 |ESP32C2|120|142|8.3|26MHz XTAL|
 
-![og-160](https://user-images.githubusercontent.com/6020549/201065294-da5f289d-c7b6-49b1-bb0e-6258e7d1677e.jpg)
+![graph](https://user-images.githubusercontent.com/6020549/201069004-07139ab5-388f-49b8-bd96-80b9ff25b17c.jpg)
 
 
 # How to set O2 compile option   
