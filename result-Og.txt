@@ -169,8 +169,7 @@ C Converted Double Precision Whetstones: 8.3 MIPS
 
 -------------------------------------------------------------------
 
-# ESP32-C2@160Mhz(26MHz XTAL)
-
+# ESP32-C2@120Mhz(26MHz XTAL)
 Target is ESP32C2@120Mhz
 
 Dhrystone Benchmark, Version C, Version 2.2

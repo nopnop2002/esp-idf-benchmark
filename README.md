@@ -111,7 +111,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32S3|160|142|10.0||
 |ESP32S3|240|190|14.3||
 |ESP32C3|160|167|8.3||
-|ESP32C2|160|142|8.3|26MHz XTAL|
+|ESP32C2|120|142|8.3|26MHz XTAL|
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
@@ -131,4 +131,4 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 |ESP32S3|160|237|25.0||
 |ESP32S3|240|356|50.0||
 |ESP32C3|160|407|20.0||
-|ESP32C2|160|356|20.0|26MHz XTAL|
+|ESP32C2|120|356|20.0|26MHz XTAL|
