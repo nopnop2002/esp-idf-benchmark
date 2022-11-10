@@ -17,13 +17,15 @@ void app_main()
 #if CONFIG_IDF_TARGET_ESP8266
 	printf("Target is ESP8266\n");
 #elif CONFIG_IDF_TARGET_ESP32
-	printf("Target is ESP32@%dMhz\n", ets_get_cpu_frequency());
+	printf("Target is ESP32@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
 #elif CONFIG_IDF_TARGET_ESP32S2
-	printf("Target is ESP32S2@%dMhz\n", ets_get_cpu_frequency());
+	printf("Target is ESP32S2@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
 #elif CONFIG_IDF_TARGET_ESP32S3
-	printf("Target is ESP32S3@%dMhz\n", ets_get_cpu_frequency());
+	printf("Target is ESP32S3@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
+#elif CONFIG_IDF_TARGET_ESP32C2
+	printf("Target is ESP32C2@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
 #elif CONFIG_IDF_TARGET_ESP32C3
-	printf("Target is ESP32C3@%dMhz\n", ets_get_cpu_frequency());
+	printf("Target is ESP32C3@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
 #endif
 
 	xTaskCreate(&dhrystone, "DHRY", 1024*4, (void *)taskHandle, my_prio+1, NULL);
