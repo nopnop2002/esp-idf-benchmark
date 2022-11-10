@@ -35,7 +35,7 @@ You have to change this config.
 ```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
-idf.py set-target esp32
+idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3}
 idf.py menuconfig
 idf.py flash monitor
 ```
@@ -48,31 +48,15 @@ idf.py set-target esp32s2
 idf.py menuconfig
 idf.py flash monitor
 ```
+Note for ESP32-S2:   
+The following options do not exist in ESP32-S2: FPU, zero-overhead loops, MAC, DFP accelerator.   
 
-__The following options do not exist in ESP32-S2: FPU, zero-overhead loops, MAC, DFP accelerator.__   
+Note for ESP32-S3:   
+It is unknown at this time whether it has the zero-overhead loops function.  
 
+Note for ESP32-C2/C3
+It is unknown at this time whether it has the zero-overhead loops function.   
 
-# Installation for ESP32-S3
-```
-git clone https://github.com/nopnop2002/esp-idf-benchmark
-cd esp-idf-benchmark/
-idf.py set-target esp32s3
-idf.py menuconfig
-idf.py flash monitor
-```
-__It is unknown at this time whether it has the zero-overhead loops function.__   
-
-
-# Installation for ESP32-C3
-```
-git clone https://github.com/nopnop2002/esp-idf-benchmark
-cd esp-idf-benchmark/
-idf.py set-target esp32c3
-idf.py menuconfig
-idf.py flash monitor
-```
-
-__It is unknown at this time whether it has the zero-overhead loops function.__   
 
 # Compiler Version   
 
@@ -88,17 +72,17 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## ESP32
 ```
 $ xtensa-esp32-elf-cc --version
-xtensa-esp32-elf-cc (crosstool-NG esp-2020r3) 8.4.0
-Copyright (C) 2018 Free Software Foundation, Inc.
+xtensa-esp32-elf-cc (crosstool-NG esp-2022r1) 11.2.0
+Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 ## ESP32-S2
 ```
 $ xtensa-esp32s2-elf-cc --version
-xtensa-esp32s2-elf-cc (crosstool-NG esp-2020r3) 8.4.0
-Copyright (C) 2018 Free Software Foundation, Inc.
+xtensa-esp32s2-elf-cc (crosstool-NG esp-2022r1) 11.2.0
+Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
@@ -106,8 +90,8 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## ESP32-S3
 ```
 $ xtensa-esp32s3-elf-cc --version
-xtensa-esp32s3-elf-cc (crosstool-NG esp-2020r3) 8.4.0
-Copyright (C) 2018 Free Software Foundation, Inc.
+xtensa-esp32s3-elf-cc (crosstool-NG esp-2022r1) 11.2.0
+Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
@@ -116,8 +100,8 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## ESP32-C3
 ```
 $ riscv32-esp-elf-cc --version
-riscv32-esp-elf-cc (crosstool-NG 1.24.0.123_64eb9ff) 8.4.0
-Copyright (C) 2018 Free Software Foundation, Inc.
+riscv32-esp-elf-cc (crosstool-NG esp-2022r1) 11.2.0
+Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
@@ -125,16 +109,17 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 # Benchmark with Og compile option(default).   
 
-|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
-|:-:|:-:|:-:|:-:|
-|ESP8266|160|57|6.2|
-|ESP32|160|95|10.0|
-|ESP32|240|142|16.7|
-|ESP32S2|160|95|8.3|
-|ESP32S2|240|142|12.5|
-|ESP32S3|160|142|10.0|
-|ESP32S3|240|178|16.7|
-|ESP32C3|160|167|9.1|
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)||
+|:-:|:-:|:-:|:-:|:-:|
+|ESP8266|160|57|6.2||
+|ESP32|160|142|9.1||
+|ESP32|240|142|16.7||
+|ESP32S2|160|95|8.3||
+|ESP32S2|240|142|12.5||
+|ESP32S3|160|142|10.0||
+|ESP32S3|240|190|14.3||
+|ESP32C3|160|167|8.3||
+|ESP32C2|160|142|8.3|26MHz XTAL|
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
@@ -145,12 +130,13 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 
 # Benchmark with O2 compile option enabled.   
 
-|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)|
-|:-:|:-:|:-:|:-:|
-|ESP32|160|167|33.3|
-|ESP32|240|259|50.0|
-|ESP32S2|160|142|33.3|
-|ESP32S2|240|237|33.3|
-|ESP32S3|160|190|33.3|
-|ESP32S3|240|316|50.0|
-|ESP32C3|160|356|25.0|
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)||
+|:-:|:-:|:-:|:-:|:-:|
+|ESP32|160|203|33.3||
+|ESP32|240|316|50.0||
+|ESP32S2|160|178|25.0||
+|ESP32S2|240|283|33.3||
+|ESP32S3|160|237|25.0||
+|ESP32S3|240|356|50.0||
+|ESP32C3|160|407|20.0||
+|ESP32C2|160|356|20.0|26MHz XTAL|
