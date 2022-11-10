@@ -17,6 +17,7 @@ I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-ben
 |ESP32-S2|ESP-IDF|v5.0|
 |ESP32-S3|ESP-IDF|v5.0|
 |ESP32-C3|ESP-IDF|v5.0|
+|ESP32-C2|ESP-IDF|v5.0|
 
 # Installation for ESP8266
 ```
