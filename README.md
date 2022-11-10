@@ -113,6 +113,9 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32C3|160|167|8.3||
 |ESP32C2|120|142|8.3|26MHz XTAL|
 
+![og-160](https://user-images.githubusercontent.com/6020549/201065294-da5f289d-c7b6-49b1-bb0e-6258e7d1677e.jpg)
+
+
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
 Compile options can be changed in the CMakeLists.txt.   
