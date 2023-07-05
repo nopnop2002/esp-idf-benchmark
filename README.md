@@ -13,11 +13,12 @@ I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-ben
 |Chip|Framework|Versions|
 |:-:|:-:|:-:|
 |ESP8266|ESP8266 RTOS SDK|v3.x|
-|ESP32|ESP-IDF|v5.0|
-|ESP32-S2|ESP-IDF|v5.0|
-|ESP32-S3|ESP-IDF|v5.0|
-|ESP32-C3|ESP-IDF|v5.0|
-|ESP32-C2|ESP-IDF|v5.0|
+|ESP32|ESP-IDF|v5.1|
+|ESP32-S2|ESP-IDF|v5.1|
+|ESP32-S3|ESP-IDF|v5.1|
+|ESP32-C3|ESP-IDF|v5.1|
+|ESP32-C2|ESP-IDF|v5.1|
+|ESP32-C6|ESP-IDF|v5.1|
 
 # Installation for ESP8266
 ```
@@ -36,19 +37,11 @@ You have to change this config.
 ```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
 cd esp-idf-benchmark/
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3}
+idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash monitor
 ```
 
-Note for ESP32-S2:   
-The following options do not exist in ESP32-S2: FPU, zero-overhead loops, MAC, DFP accelerator.   
-
-Note for ESP32-S3:   
-It is unknown at this time whether it has the zero-overhead loops function.  
-
-Note for ESP32-C2/C3:   
-It is unknown at this time whether it has the zero-overhead loops function.   
 
 
 # Compiler Version   
@@ -105,7 +98,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)||
 |:-:|:-:|:-:|:-:|:-:|
 |ESP8266|160|57|6.2||
-|ESP32|160|142|9.1||
+|ESP32|160|95|10.0||
 |ESP32|240|142|16.7||
 |ESP32S2|160|95|8.3||
 |ESP32S2|240|142|12.5||
@@ -113,8 +106,9 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32S3|240|190|14.3||
 |ESP32C3|160|167|8.3||
 |ESP32C2|120|142|8.3|26MHz XTAL|
+|ESP32C6|160|178|12.5||
 
-![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/a46f20e5-668f-42a1-97e2-67f7297ad89e)
+![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/27f054b8-4239-496a-a777-d5ddc73f9e1d)
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
@@ -135,5 +129,6 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 |ESP32S3|240|356|50.0||
 |ESP32C3|160|407|20.0||
 |ESP32C2|120|356|20.0|26MHz XTAL|
+|ESP32C6|160|474|25.0||
 
 ![graph2](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/156ffcf3-ae32-405a-beee-ef004ffa9a4c)

@@ -27,13 +27,13 @@ Trying 50000 runs through Dhrystone:
 Measured time too small to obtain meaningful results
 
 Trying 500000 runs through Dhrystone:
-Microseconds for one run through Dhrystone:        4.0
-Dhrystones per Second:                          250000
-DMIPS:                                             142
+Microseconds for one run through Dhrystone:        6.0
+Dhrystones per Second:                          166667
+DMIPS:                                              95
 
 
-Loops: 1000, Iterations: 1, Duration: 11 sec.
-C Converted Double Precision Whetstones: 9.1 MIPS
+Loops: 1000, Iterations: 1, Duration: 10 sec.
+C Converted Double Precision Whetstones: 10.0 MIPS
 
 -------------------------------------------------------------------
 
@@ -188,3 +188,26 @@ DMIPS:                                             142
 Loops: 1000, Iterations: 1, Duration: 12 sec.
 C Converted Double Precision Whetstones: 8.3 MIPS
 
+-------------------------------------------------------------------
+
+# ESP32-C6@160Mhz
+Target is ESP32C6@160Mhz
+
+Dhrystone Benchmark, Version C, Version 2.2
+Program compiled without 'register' attribute
+Using time(), HZ=1
+
+Trying 50000 runs through Dhrystone:
+Measured time too small to obtain meaningful results
+
+Trying 500000 runs through Dhrystone:
+Measured time too small to obtain meaningful results
+
+Trying 5000000 runs through Dhrystone:
+Microseconds for one run through Dhrystone:        3.2
+Dhrystones per Second:                          312500
+DMIPS:                                             178
+
+
+Loops: 1000, Iterations: 1, Duration: 8 sec.
+C Converted Double Precision Whetstones: 12.5 MIPS
