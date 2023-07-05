@@ -95,7 +95,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 # Benchmark with Og compile option(default).   
 
-|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)||
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)||
 |:-:|:-:|:-:|:-:|:-:|
 |ESP8266|160|57|6.2||
 |ESP32|160|95|10.0||
@@ -119,7 +119,7 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 
 # Benchmark with O2 compile option enabled.   
 
-|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstones(MIPS)||
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)||
 |:-:|:-:|:-:|:-:|:-:|
 |ESP32|160|203|33.3||
 |ESP32|240|316|50.0||
