@@ -108,7 +108,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32C2|120|142|8.3|26MHz XTAL|
 |ESP32C6|160|178|12.5||
 
-![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/27f054b8-4239-496a-a777-d5ddc73f9e1d)
+![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/25ebbc18-2522-4905-bc54-a3551ebd4da7)
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
