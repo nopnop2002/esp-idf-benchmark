@@ -58,8 +58,8 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## ESP32
 ```
 $ xtensa-esp32-elf-cc --version
-xtensa-esp32-elf-cc (crosstool-NG esp-2022r1) 11.2.0
-Copyright (C) 2021 Free Software Foundation, Inc.
+xtensa-esp32-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
@@ -67,8 +67,8 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## ESP32-S2
 ```
 $ xtensa-esp32s2-elf-cc --version
-xtensa-esp32s2-elf-cc (crosstool-NG esp-2022r1) 11.2.0
-Copyright (C) 2021 Free Software Foundation, Inc.
+xtensa-esp32s2-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
@@ -76,18 +76,18 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## ESP32-S3
 ```
 $ xtensa-esp32s3-elf-cc --version
-xtensa-esp32s3-elf-cc (crosstool-NG esp-2022r1) 11.2.0
-Copyright (C) 2021 Free Software Foundation, Inc.
+xtensa-esp32s3-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 
-## ESP32-C2/C3
+## ESP32-C2/C3/C6
 ```
 $ riscv32-esp-elf-cc --version
-riscv32-esp-elf-cc (crosstool-NG esp-2022r1) 11.2.0
-Copyright (C) 2021 Free Software Foundation, Inc.
+riscv32-esp-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
