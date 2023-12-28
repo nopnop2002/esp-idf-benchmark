@@ -19,6 +19,7 @@ I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-ben
 |ESP32-C3|ESP-IDF|v5.1|
 |ESP32-C2|ESP-IDF|v5.1|
 |ESP32-C6|ESP-IDF|v5.1|
+|ESP32-H2|ESP-IDF|v5.1|
 
 # Installation for ESP8266
 ```
@@ -83,7 +84,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 
-## ESP32-C2/C3/C6
+## ESP32-C2/C3/C6/H2
 ```
 $ riscv32-esp-elf-cc --version
 riscv32-esp-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
@@ -107,8 +108,9 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 |ESP32C3|160|167|8.3||
 |ESP32C2|120|142|8.3|26MHz XTAL|
 |ESP32C6|160|178|12.5||
+|ESP32H2|96|142|5.3||
 
-![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/25ebbc18-2522-4905-bc54-a3551ebd4da7)
+![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/c907882e-c9c2-4d6d-88c0-2fce8cf66cd5)
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
@@ -130,5 +132,6 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 |ESP32C3|160|407|20.0||
 |ESP32C2|120|356|20.0|26MHz XTAL|
 |ESP32C6|160|474|25.0||
+|ESP32H2|96|237|12.5||
 
-![graph2](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/156ffcf3-ae32-405a-beee-ef004ffa9a4c)
+![graph2](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/a1b9b187-13ff-4218-91c9-da03911f3e7f)
