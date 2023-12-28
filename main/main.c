@@ -28,6 +28,8 @@ void app_main()
 	printf("Target is ESP32C3@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
 #elif CONFIG_IDF_TARGET_ESP32C6
 	printf("Target is ESP32C6@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
+#elif CONFIG_IDF_TARGET_ESP32H2
+	printf("Target is ESP32H2@%"PRIu32"Mhz\n", ets_get_cpu_frequency());
 #endif
 
 	xTaskCreate(&dhrystone, "DHRY", 1024*4, (void *)taskHandle, my_prio+1, NULL);
