@@ -134,4 +134,4 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 |ESP32C6|160|474|25.0||
 |ESP32H2|96|237|12.5||
 
-![graph2](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/a1b9b187-13ff-4218-91c9-da03911f3e7f)
+![Image](https://github.com/user-attachments/assets/1d152749-989d-4bd5-8c03-428e1c56203f)
