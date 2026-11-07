@@ -8,19 +8,6 @@ I ported from [here](https://github.com/Keith-S-Thompson/dhrystone/tree/master/v
 # Whetstone Benchmark 
 I ported from [here](https://github.com/fm4dd/sbc-benchmarks/tree/master/sbc-bench/src/whetstone).
 
-# Supported versions of frameworks
-
-|Chip|Framework|Versions|
-|:-:|:-:|:-:|
-|ESP8266|ESP8266 RTOS SDK|v3.x|
-|ESP32|ESP-IDF|v5.1|
-|ESP32-S2|ESP-IDF|v5.1|
-|ESP32-S3|ESP-IDF|v5.1|
-|ESP32-C3|ESP-IDF|v5.1|
-|ESP32-C2|ESP-IDF|v5.1|
-|ESP32-C6|ESP-IDF|v5.1|
-|ESP32-H2|ESP-IDF|v5.1|
-
 # Installation for ESP8266
 ```
 git clone https://github.com/nopnop2002/esp-idf-benchmark
@@ -43,74 +30,26 @@ idf.py menuconfig
 idf.py flash monitor
 ```
 
-
-
-# Compiler Version   
-
-## ESP8266
-```
-$ xtensa-lx106-elf-gcc --version
-xtensa-lx106-elf-gcc (crosstool-NG esp-2020r3-49-gd5524c1) 8.4.0
-Copyright (C) 2018 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-
-## ESP32
-```
-$ xtensa-esp32-elf-cc --version
-xtensa-esp32-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
-Copyright (C) 2022 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-
-## ESP32-S2
-```
-$ xtensa-esp32s2-elf-cc --version
-xtensa-esp32s2-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
-Copyright (C) 2022 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-
-## ESP32-S3
-```
-$ xtensa-esp32s3-elf-cc --version
-xtensa-esp32s3-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
-Copyright (C) 2022 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-
-
-## ESP32-C2/C3/C6/H2
-```
-$ riscv32-esp-elf-cc --version
-riscv32-esp-elf-cc (crosstool-NG esp-12.2.0_20230208) 12.2.0
-Copyright (C) 2022 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-
-
 # Benchmark with Og compile option(default).   
 
-|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)||
-|:-:|:-:|:-:|:-:|:-:|
-|ESP8266|160|57|6.2||
-|ESP32|160|95|10.0||
-|ESP32|240|142|16.7||
-|ESP32S2|160|95|8.3||
-|ESP32S2|240|142|12.5||
-|ESP32S3|160|142|10.0||
-|ESP32S3|240|190|14.3||
-|ESP32C3|160|167|8.3||
-|ESP32C2|120|142|8.3|26MHz XTAL|
-|ESP32C6|160|178|12.5||
-|ESP32H2|96|142|5.3||
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)|ESP-IDF||
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|ESP8266|160|57|6.2|||
+|ESP32|160|142|9.1||V6.0|
+|ESP32|240|142|16.7|V6.0||
+|ESP32S2|160|95|8.3|V6.0||
+|ESP32S2|240|142|12.5|V6.0||
+|ESP32S3|160|142|10.0|V6.0||
+|ESP32S3|240|190|14.3|V6.0||
+|ESP32C2|120|142|8.3|V6.0|26MHz XTAL|
+|ESP32C3|160|142|9.1|V6.0||
+|ESP32C5|240|316|20.0|V6.0||
+|ESP32C6|160|142|12.5|V6.0||
+|ESP32H2|96|95|5.3|V6.0||
+|ESP32P4|360|474|25.0|V6.0||
 
-![graph1](https://github.com/nopnop2002/esp-idf-benchmark/assets/6020549/c907882e-c9c2-4d6d-88c0-2fce8cf66cd5)
+<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/c6de7943-38d4-48e7-9e54-c726a777d77e" />
+<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/fe0df676-76b6-4927-962d-b6006f047047" />
 
 # How to set O2 compile option   
 The default compile option for esp-idf is Og.   
@@ -121,17 +60,20 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 
 # Benchmark with O2 compile option enabled.   
 
-|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)||
-|:-:|:-:|:-:|:-:|:-:|
-|ESP32|160|203|33.3||
-|ESP32|240|316|50.0||
-|ESP32S2|160|178|25.0||
-|ESP32S2|240|283|33.3||
-|ESP32S3|160|237|25.0||
-|ESP32S3|240|356|50.0||
-|ESP32C3|160|407|20.0||
-|ESP32C2|120|356|20.0|26MHz XTAL|
-|ESP32C6|160|474|25.0||
-|ESP32H2|96|237|12.5||
+|SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)|ESP-IDF||
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|ESP32|160|219|25.0|V6.0||
+|ESP32|240|356|33.3|V6.0||
+|ESP32S2|160|178|25.0|V6.0||
+|ESP32S2|240|285|33.3|V6.0||
+|ESP32S3|160|237|33.3|V6.0||
+|ESP32S3|240|356|50.0|V6.0||
+|ESP32C2|120|316|25.0|V6.0|26MHz XTAL|
+|ESP32C3|160|407|20.0|V6.0||
+|ESP32C5|240|711|50.0|V6.0||
+|ESP32C6|160|407|33.3|V6.0||
+|ESP32H2|96|259|12.5|V6.0||
+|ESP32P4|360|949|100.0|V6.0||
 
-![Image](https://github.com/user-attachments/assets/1d152749-989d-4bd5-8c03-428e1c56203f)
+<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/320d1b54-cf16-4aec-b2df-2745cf5ea783" />
+<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/8c1e8c71-62cb-4a71-9718-1a1c7728b6f5" />

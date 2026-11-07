@@ -387,11 +387,11 @@
 
 #define CLOCK_TYPE "time()"
 #undef HZ
+#include <time.h>
 #define HZ	(1) /* time() returns time in seconds */
-extern long     time(); /* see library function "time"  */
 #define Too_Small_Time 2 /* Measurements should last at least 2 seconds */
-#define Start_Timer() Begin_Time = time ( (long *) 0)
-#define Stop_Timer()  End_Time   = time ( (long *) 0)
+#define Start_Timer() Begin_Time = time ( NULL )
+#define Stop_Timer()  End_Time   = time ( NULL )
 
 #else
 
