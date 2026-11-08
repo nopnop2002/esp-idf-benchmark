@@ -48,7 +48,7 @@ idf.py flash monitor
 |ESP32H2|96|95|5.3|V6.0||
 |ESP32P4|360|474|25.0|V6.0||
 
-<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/c24e1cf9-6b42-457e-9063-a001b9243b4b" />
+<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/98bc3f98-daa4-4433-b4af-4eeb5a7c6a59" />
 <img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/fe0df676-76b6-4927-962d-b6006f047047" />
 
 # How to set O2 compile option   
@@ -75,5 +75,5 @@ zero-overhead loops can execute a loop with a predetermined number of executions
 |ESP32H2|96|259|12.5|V6.0||
 |ESP32P4|360|949|100.0|V6.0||
 
-<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/c741ea53-f07e-4066-adc6-f73056831825" />
+<img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/e6fc86dc-4913-4b91-a535-2f7ce20830cd" />
 <img width="481" height="289" alt="Image" src="https://github.com/user-attachments/assets/8c1e8c71-62cb-4a71-9718-1a1c7728b6f5" />
