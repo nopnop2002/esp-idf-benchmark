@@ -35,7 +35,7 @@ idf.py flash monitor
 |SoC|Freq(Mhz)|Dhrystone(MIPS)|Whetstone(MIPS)|ESP-IDF||
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |ESP8266|160|57|6.2|||
-|ESP32|160|142|9.1||V6.0|
+|ESP32|160|142|9.1|V6.0||
 |ESP32|240|142|16.7|V6.0||
 |ESP32S2|160|95|8.3|V6.0||
 |ESP32S2|240|142|12.5|V6.0||
